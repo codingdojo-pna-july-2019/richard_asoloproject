@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for post in posts %}
+    <form action="/update_post" method="post" id="update">
+        <textarea name="updated_text" cols="30" rows="10" for="update">{{ post.post }}</textarea>
+        <input type="hidden" name="post_id" value="{{ post.id }}">
+        <input type="submit" name="submit">
+    </form>
+    {% endfor %}
+</body>
+</html>

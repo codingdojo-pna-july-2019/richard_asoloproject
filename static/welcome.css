@@ -1,0 +1,26 @@
+body {
+    background: url("/static/img/pacificnw.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+label {
+    color: white;
+}
+#banner {
+    background-color: #5583b4;
+    margin-top: 30px;
+    padding: 20px;
+    opacity: 0.4;
+    /* border: solid; */
+    border-radius: 8px;
+}
+#banner h2 {
+    font-weight: bold;
+    color: #000000;
+}
+flash_msg {
+    color: red;
+    text-align: center
+}

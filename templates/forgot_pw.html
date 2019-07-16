@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reset password</title>
+</head>
+<body>
+    <!-- resets password -->
+    <form action="/reset_pw" method="post">
+        <h3>Choose one:</h3>
+        <label for="email">User name:</label>
+        <input type="text" name="email" id="#" placeholder="johndoe@email.com">
+        <ul>
+            <ol>
+                <li>
+                   <label for="question-one">What is your oldest sibling’s middle name?</label>
+                   <input type="text" name="question-one" id="">
+                </li> 
+                <li>
+                    <label for="question-two">In what city or town did your mother and father meet?</label>
+                    <input type="text" name="question-two" id="">
+                </li>
+                <li>
+                    <label for="question-three">What is your car’s license plate number?</label>
+                    <input type="text" name="question-three" id="">
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="#">
+                </li>
+            </ol>
+        </ul>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- displays error message -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
